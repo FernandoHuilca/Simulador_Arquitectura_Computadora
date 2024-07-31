@@ -1,7 +1,10 @@
+import CPU.CPU;
 import CPU.Cache;
 import MemoriaPrincipal.MemoriaPrincipal;
 
 import java.io.IOException;
+
+import static MemoriaPrincipal.Instrucciones.*;
 
 // Author: Fernando Huilca
 public class Main {
@@ -12,8 +15,10 @@ public class Main {
         int tamañoDeLaCache = 16; //bytes
         //Creación de la memoria que ocuparemos: // La memoria principal necesita saber el tamaño y los bloques
         MemoriaPrincipal memoriaPrincipal = new MemoriaPrincipal(tamañoDeDirección, tamañoDeBloque);
+        //Creación de la Cache:
+        Cache cache = new Cache(tamañoDeLaCache,memoriaPrincipal);
         //Creación del CPU
-
+        CPU cpu = new CPU(cache);
         //Imprimimos a ver si se creó correctamente:
         System.out.println("Características de la memoria principal ____________________________________________________");
         System.out.println("Numero de datos: " + memoriaPrincipal.getNúmeroDeDatos());
@@ -46,6 +51,16 @@ public class Main {
             System.err.println("ERROR, NO SE GUARDÓ CORRECTAMENTE EN EL ARCHIVO: " + e.getMessage());
         }
         imprimirDatosDeMemoria(memoriaPrincipal.getDatos());
+
+
+        System.out.println("Caso 5: Creación del cpu : _______________________________________");
+        System.out.println("Los registros en el cpu son: " + cpu.getRegistro1() + " ::: " + cpu.getRegistros2());
+        System.out.println("PC: " + cpu.getPC());
+        System.out.println("RI: " + cpu.getRI());
+        cpu.ejecutarInstrucción(ADD);
+        System.out.println("Los registros en el cpu son: " + cpu.getRegistro1() + " ::: " + cpu.getRegistros2());
+        System.out.println("PC: " + cpu.getPC());
+        System.out.println("RI: " + cpu.getRI());
 
     }
 

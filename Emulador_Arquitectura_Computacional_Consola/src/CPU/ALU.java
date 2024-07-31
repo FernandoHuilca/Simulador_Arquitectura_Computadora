@@ -24,9 +24,8 @@ public class ALU { //El cerebro matemático //Ejemplo de alu: Intel 74181 en 197
 
 
     // ________________ Espacio de Unidad Aritmética ________________
-    public double add(double a, double b){
-        return a + b;
+
+    public int suma(int valor, int valor1) {
+    return valor + valor1;
     }
-
-
 }
