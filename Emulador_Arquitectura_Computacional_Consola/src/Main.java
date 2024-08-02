@@ -1,6 +1,6 @@
 import CPU.CPU;
 import CPU.Cache;
-import MemoriaPrincipal.MemoriaPrincipal;
+import MemoriaPrincipal.*;
 
 import java.io.IOException;
 
@@ -10,7 +10,7 @@ import static MemoriaPrincipal.Instrucciones.*;
 public class Main {
     public static void main(String[] args) {
         //Configuración de memoria y caché Inicial
-        int tamañoDeDirección = 4; //bits
+        int tamañoDeDirección = 8; //bits
         int tamañoDeBloque = 4; //bytes
         int tamañoDeLaCache = 16; //bytes
         //Creación de la memoria que ocuparemos: // La memoria principal necesita saber el tamaño y los bloques
@@ -54,18 +54,40 @@ public class Main {
 
 
         System.out.println("Caso 5: Creación del cpu : _______________________________________");
-        System.out.println("Los registros en el cpu son: " + cpu.getRegistro1() + " ::: " + cpu.getRegistros2());
+        System.out.println("Los registros en el cpu son: " + cpu.getValorRegistro(0) + " ::: " + cpu.getValorRegistro(1));
         System.out.println("PC: " + cpu.getPC());
         System.out.println("RI: " + cpu.getRI());
-        cpu.ejecutarInstrucción(ADD);
-        System.out.println("Los registros en el cpu son: " + cpu.getRegistro1() + " ::: " + cpu.getRegistros2());
+        cpu.ejecutarInstrucción(ADD,0,1);
         System.out.println("PC: " + cpu.getPC());
         System.out.println("RI: " + cpu.getRI());
+        System.out.println("Los registros en el cpu son: " + cpu.getValorRegistro(0) + " ::: " + cpu.getValorRegistro(1));
+
+
+
+        System.out.println("Caso 6: Operación LOAD del cpu : _______________________________________");
+        System.out.println("Los registros en el cpu son: " + cpu.getValorRegistro(0) + " ::: " + cpu.getValorRegistro(1));
+        System.out.println("PC: " + cpu.getPC());
+        System.out.println("RI: " + cpu.getRI());
+        cpu.ejecutarInstrucción(LOAD,0,1);
+        System.out.println("PC: " + cpu.getPC());
+        System.out.println("RI: " + cpu.getRI());
+        System.out.println("Los registros en el cpu son: " + cpu.getValorRegistro(0) + " ::: " + cpu.getValorRegistro(1));
+        cpu.ejecutarInstrucción(LOAD,1,8);
+        System.out.println("Los registros en el cpu son: " + cpu.getValorRegistro(0) + " ::: " + cpu.getValorRegistro(1));
+
+
+        System.out.println("Caso 6: Prueba transformación binaria y decimal : _______________________________________");
+        int valor = 2;
+        System.out.println("El valor " + valor + " en binario es: " + SistemasNumericos.decimalABinario(valor));
+        int valor2 = 11111111;
+        System.out.println("El valor " + valor2 + " en decimal es: " + SistemasNumericos.binarioADecimal(valor2));
+        System.out.println("El valor " + valor + " en decimal String es: " + SistemasNumericos.decimalABinarioDevuelveString(valor));
+
+
+        System.out.println("Caso 6: Prueba transformación binaria y decimal : _______________________________________");
+
 
     }
-
-
-
 
 
 

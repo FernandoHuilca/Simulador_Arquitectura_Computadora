@@ -8,9 +8,11 @@ public class MemoriaPrincipal {
     private int[] datos;
     private int númeroDeDatos;
     private int númeroDeBloques;
+    private int tamañoDeBloque;
     private BloqueDeMemoriaPrincipal[] bloques;
 
     public MemoriaPrincipal(int tamañoDeDirección, int tamañoDeBloque) {
+        this.tamañoDeBloque = tamañoDeBloque;
         númeroDeDatos = (int) Math.pow(2, tamañoDeDirección); // 2^tamañoDeDireccion // me devuelve la cantidad de
         // números que puedo escribir con esa cantidad de bits
         númeroDeBloques = (númeroDeDatos / tamañoDeBloque);
@@ -89,5 +91,9 @@ public class MemoriaPrincipal {
     }
     public int getNúmeroDeBloques(){
         return númeroDeBloques;
+    }
+
+    public int getTamañoDelBloque() {
+        return tamañoDeBloque;
     }
 }

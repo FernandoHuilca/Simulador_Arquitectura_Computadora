@@ -1,22 +1,20 @@
 package CPU;
 
 import MemoriaPrincipal.Instrucciones;
+import MemoriaPrincipal.SistemasNumericos;
 
 public class UnidadDeControl {
-    private CPU cpu;
-    public UnidadDeControl(CPU cpu) {
-    this.cpu = cpu;
-    }
 
-    public void ejercutarInstrucción(Instrucciones instrucción, int registro1, int registro2, ALU alu) {
+    public void ejecutarInstrucción(Instrucciones instrucción, int numRegistro1, int numRegistro2_Dirección, ALU alu, CPU cpu) {
         switch (instrucción) {
             case ADD:
-                cpu.setRegistro1(alu.suma(registro1, registro2)) ;
+                cpu.setValorRegistro(numRegistro1, (alu.suma(cpu.getValorRegistro(numRegistro1), cpu.getValorRegistro(numRegistro1))));
                 break;
-            /*case STORE:
-                registros[reg1].setValor(alu.resta(registros[reg1].getValor(), registros[reg2].getValor()));
+            case LOAD:
+                String direcciónABinario = SistemasNumericos.decimalABinarioDevuelveString(numRegistro2_Dirección);
+                cpu.setValorRegistro(numRegistro1, cpu.getValorMemoriaCache(direcciónABinario));
                 break;
-            case AND:
+            /*case AND:
                 registros[reg1].setValor(alu.and(registros[reg1].getValor(), registros[reg2].getValor()));
                 break;
             case OR:
