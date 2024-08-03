@@ -10,9 +10,9 @@ import static MemoriaPrincipal.Instrucciones.*;
 public class Main {
     public static void main(String[] args) {
         //Configuración de memoria y caché Inicial
-        int tamañoDeDirección = 4; //bits
-        int tamañoDeBloque = 4; //bytes
-        int tamañoDeLaCache = 8; //bytes
+        int tamañoDeDirección = 6; //bits
+        int tamañoDeBloque = 8; //bytes
+        int tamañoDeLaCache = 32; //bytes
         //Creación de la memoria que ocuparemos: // La memoria principal necesita saber el tamaño y los bloques
         MemoriaPrincipal memoriaPrincipal = new MemoriaPrincipal(tamañoDeDirección, tamañoDeBloque, tamañoDeLaCache);
         //Creación de la Cache:

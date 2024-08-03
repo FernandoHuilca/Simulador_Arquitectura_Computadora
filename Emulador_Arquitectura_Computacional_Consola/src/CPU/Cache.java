@@ -100,10 +100,14 @@ public class Cache {
         System.out.println("El offset es: " + offset);
     }
     public void imprimirLíneas(){
-        System.out.println("Las líneas de chache son:");
+        System.out.println("\nLas líneas de chache son:");
+        System.out.println("--------------------------------");
+        System.out.println("|    Tag       |     Bloque    |");
+        System.out.println("--------------------------------");
         for (int i = 0 ; i < númeroDeLíneas ; i ++ ){
-            System.out.println("        "+ i + " tagDeLínea: " + líneasDeCache[i].getTag() + " bloque: " + líneasDeCache[i].getBloque().getNombre());
+            System.out.println("|     " + líneasDeCache[i].getTag() + "        |     " + líneasDeCache[i].getBloque().getNombre() + "     |");
         }
+        System.out.println("--------------------------------");
     }
 
 

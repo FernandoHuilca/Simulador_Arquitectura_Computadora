@@ -7,7 +7,7 @@ public class LíneaDeCache {
     private BloqueDeMemoriaPrincipal bloque;
 
     public LíneaDeCache(int tamañoDelBloque){
-        this.tag_Etiqueta = " null ";
+        this.tag_Etiqueta = "x";
         this.bloque = new BloqueDeMemoriaPrincipal(tamañoDelBloque, -1, -1);
     }
 
