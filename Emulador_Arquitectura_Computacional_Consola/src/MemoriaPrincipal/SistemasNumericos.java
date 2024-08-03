@@ -53,7 +53,7 @@ public class SistemasNumericos {
         return decimal;
     }
 
-    public static String decimalABinarioDevuelveString(int decimal) {
+    public static String decimalABinarioDevuelveString(int decimal, int cuantosBits) {
 
         StringBuilder binary = new StringBuilder();
 
@@ -65,7 +65,7 @@ public class SistemasNumericos {
         }
 
         // Rellenar con ceros a la izquierda hasta tener 8 bits
-        while (binary.length() < 8) {
+        while (binary.length() < cuantosBits) {
             binary.insert(0, '0');
         }
 

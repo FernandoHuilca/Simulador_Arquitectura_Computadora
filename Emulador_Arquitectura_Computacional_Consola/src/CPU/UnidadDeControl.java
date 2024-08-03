@@ -7,12 +7,16 @@ public class UnidadDeControl {
 
     public void ejecutarInstrucción(Instrucciones instrucción, int numRegistro1, int numRegistro2_Dirección, ALU alu, CPU cpu) {
         switch (instrucción) {
+            case LOAD:
+                String direcciónABinario = SistemasNumericos.decimalABinarioDevuelveString(numRegistro2_Dirección,cpu.getBitsDeDirección());
+                cpu.setValorRegistro(numRegistro1, cpu.getValorMemoriaCache(direcciónABinario));
+                break;
+            case STORE:
+                String direcciónABinario2 = SistemasNumericos.decimalABinarioDevuelveString(numRegistro2_Dirección,cpu.getBitsDeDirección());
+                cpu.setValorMemoriaCache(numRegistro1, direcciónABinario2);
+                break;
             case ADD:
                 cpu.setValorRegistro(numRegistro1, (alu.suma(cpu.getValorRegistro(numRegistro1), cpu.getValorRegistro(numRegistro1))));
-                break;
-            case LOAD:
-                String direcciónABinario = SistemasNumericos.decimalABinarioDevuelveString(numRegistro2_Dirección);
-                cpu.setValorRegistro(numRegistro1, cpu.getValorMemoriaCache(direcciónABinario));
                 break;
             /*case AND:
                 registros[reg1].setValor(alu.and(registros[reg1].getValor(), registros[reg2].getValor()));

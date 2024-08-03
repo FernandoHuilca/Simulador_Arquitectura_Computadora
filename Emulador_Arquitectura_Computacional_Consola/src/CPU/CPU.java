@@ -47,6 +47,25 @@ public class CPU {
     }
 
     public int getValorMemoriaCache(String direcciónDeMemoriaPrincipal) {
-        return cache.DameElDatoDeLaDirección(direcciónDeMemoriaPrincipal); //cache.getValor(direcciónDeMemoriaPrincipal); TODO: hacer esto
+        return cache.dameElDatoDeLaDirección(direcciónDeMemoriaPrincipal);
+    }
+
+
+    public void imprimirEnConsolaCPU(){
+        System.out.println("Los registros en el cpu son:");
+               for(int i = 0 ; i < registros.length; i ++){
+                   System.out.println("Registro" + i +" "+ SistemasNumericos.decimalABinarioDevuelveString(getValorRegistro(i), 8) +
+                           "("+ getValorRegistro(i) + ")"  );
+        }
+        System.out.println("PC: " + SistemasNumericos.decimalABinarioDevuelveString(getPC(), cache.getTamañoDeDireccion()) + "("+ getPC() + ")");
+        System.out.println("RI: " + SistemasNumericos.decimalABinarioDevuelveString(getRI(),cache.getTamañoDeDireccion()) + "("+ getRI() + ")");
+    }
+
+    public int getBitsDeDirección() {
+        return cache.getTamañoDeDireccion();
+    }
+
+    public void setValorMemoriaCache(int numRegistro, String direcciónABinario) {
+        cache.cambiaElDatoEnLaDirección(registros[numRegistro].getValor(), direcciónABinario);
     }
 }

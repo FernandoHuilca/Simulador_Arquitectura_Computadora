@@ -9,13 +9,17 @@ public class MemoriaPrincipal {
     private int númeroDeDatos;
     private int númeroDeBloques;
     private int tamañoDeBloque;
+    private int tamañoDeDirecciónBits;
     private BloqueDeMemoriaPrincipal[] bloques;
+    private int númeroDeLíneasDeCache;
 
-    public MemoriaPrincipal(int tamañoDeDirección, int tamañoDeBloque) {
-        this.tamañoDeBloque = tamañoDeBloque;
-        númeroDeDatos = (int) Math.pow(2, tamañoDeDirección); // 2^tamañoDeDireccion // me devuelve la cantidad de
+    public MemoriaPrincipal(int tamañoDeDirecciónBits, int tamañoDeBloqueBytes, int tamañoDeLaCache) {
+        this.tamañoDeBloque = tamañoDeBloqueBytes;
+        this.tamañoDeDirecciónBits = tamañoDeDirecciónBits;
+        númeroDeDatos = (int) Math.pow(2, tamañoDeDirecciónBits); // 2^tamañoDeDireccion // me devuelve la cantidad de
         // números que puedo escribir con esa cantidad de bits
-        númeroDeBloques = (númeroDeDatos / tamañoDeBloque);
+        this.númeroDeBloques = (númeroDeDatos / tamañoDeBloqueBytes);
+        this.númeroDeLíneasDeCache = tamañoDeLaCache / númeroDeBloques;
 
         datos = new int[númeroDeDatos];
         bloques = new BloqueDeMemoriaPrincipal[númeroDeBloques];
@@ -26,15 +30,22 @@ public class MemoriaPrincipal {
         }
         //Pasar los datos en los bloques:
         // Pasar los datos de la memoria principal a los bloques
+        int contador = 0;
         for (int i = 0; i < bloques.length; i++) {
-            bloques[i] = new BloqueDeMemoriaPrincipal(tamañoDeBloque);
-            for (int j = 0; j < tamañoDeBloque; j++) {
-                int direccion = i * tamañoDeBloque + j;
+            bloques[i] = new BloqueDeMemoriaPrincipal(tamañoDeBloqueBytes,contador,i);
+            for (int j = 0; j < tamañoDeBloqueBytes; j++) {
+                int direccion = i * tamañoDeBloqueBytes + j;
                 if (direccion < númeroDeDatos) {
                     bloques[i].setDatoEnPosicion(j, datos[direccion]);
                 }
             }
+            contador++;
+            if (contador == númeroDeLíneasDeCache){
+                contador = 0;
+            }
+
         }
+
     }
 
 
@@ -96,4 +107,9 @@ public class MemoriaPrincipal {
     public int getTamañoDelBloque() {
         return tamañoDeBloque;
     }
+
+    public int getTamañoDeDirecciónBits() {
+        return tamañoDeDirecciónBits;
+    }
+
 }
