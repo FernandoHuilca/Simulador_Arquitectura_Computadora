@@ -11,6 +11,13 @@ import static MemoriaPrincipal.Instrucciones.*;
 // Date: 03/08/2024
 
 public class RunMejor {
+
+    // Códigos de escape ANSI para colores
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -53,14 +60,20 @@ public class RunMejor {
                     realizarInstruccion(cpu, scanner);
                     break;
                 case 2:
+                    System.out.println(ANSI_BLUE);
                     cpu.imprimirEnConsolaCPU();
+                    System.out.println(ANSI_RESET);
                     break;
                 case 3:
+                    System.out.println(ANSI_YELLOW);
                     cache.imprimirCacheAtributos();
                     cache.imprimirLíneas();
+                    System.out.println(ANSI_RESET);
                     break;
                 case 4:
-                    imprimirDatosDeMemoria(memoriaPrincipal.getDatos());
+                    System.out.println(ANSI_GREEN);
+                    imprimirDatosDeMemoria(memoriaPrincipal.getDatos(), tamañoDeDirección, tamañoDeBloque);
+                    System.out.println(ANSI_RESET);
                     break;
                 case 5:
                     salir = true;
@@ -86,12 +99,6 @@ public class RunMejor {
 
 
 
-
-
-
-
-
-
     // MÉTODOS PARA QUE FUNCIONE EL MENÚ
 
     private static int configurarMemoria(String mensaje, int[] opciones, Scanner scanner) {
@@ -101,7 +108,7 @@ public class RunMejor {
         do {
             System.out.println("__________ " + mensaje + " ______________");
             for (int i = 0; i < opciones.length; i++) {
-                System.out.println((i + 1) + ") " + opciones[i] + " bits");
+                System.out.println((i + 1) + ") " + opciones[i] + " Bytes");
             }
             System.out.print("Escriba el número de la opción que escoge: ");
             int opción = scanner.nextInt();
@@ -154,11 +161,52 @@ public class RunMejor {
                 System.out.println("Instrucción no válida.");
                 break;
         }
-    }
 
-    private static void imprimirDatosDeMemoria(int[] datosAux) {
-        for (int i = 0; i < datosAux.length; i++) {
-            System.out.println("Dato número " + i + ": " + datosAux[i]);
-        }
     }
+/*
+    private static void imprimirDatosDeMemoria(int[] datosAux, int tamañoDeDirección) {
+        // Definir los códigos de color ANSI
+        final String ANSI_RESET = "\u001B[0m";
+        final String ANSI_BLUE = "\u001B[34m";
+        final String ANSI_CYAN = "\u001B[36m";
+
+        System.out.println("__________________________________________");
+        System.out.println("     Dirección       |         Dato      ");
+        System.out.println("-----------------------------------------");
+
+        int contador = 1 ;
+        for (int i = 0; i < datosAux.length; i++) {
+            String color = (contador % 4 == 0) ? ANSI_BLUE : ANSI_CYAN;
+            System.out.println(color + "     " + SistemasNumericos.decimalABinarioDevuelveString(i, tamañoDeDirección)
+                    + " (" + i + ")" + "            " + SistemasNumericos.decimalABinarioDevuelveString(datosAux[i], 8)
+                    + "("+datosAux[i]+")" + ANSI_RESET);
+            contador++;
+        }
+    } */
+private static void imprimirDatosDeMemoria(int[] datosAux, int tamañoDeDirección, int tamañoDeBloque) {
+    // Definir los códigos de color ANSI
+    final String ANSI_RESET = "\u001B[0m";
+    final String ANSI_BLUE = "\u001B[34m";
+    final String ANSI_CYAN = "\u001B[36m";
+
+    // Definir el ancho máximo de la columna
+    final int WIDTH_DIRECCION = 18;  // Ajusta el ancho según sea necesario
+    final int WIDTH_DATO = 18;       // Ajusta el ancho según sea necesario
+
+    System.out.println("______________________________________________");
+    System.out.println("     Dirección       |         Dato      ");
+    System.out.println("----------------------------------------------");
+
+    // Alternar colores por bloque
+    for (int i = 0; i < datosAux.length; i++) {
+        String color = ((i / tamañoDeBloque) % 2 == 0) ? ANSI_BLUE : ANSI_CYAN;
+
+        // Formatear las cadenas para alinear las columnas
+        String direccion = String.format("%" + WIDTH_DIRECCION + "s", SistemasNumericos.decimalABinarioDevuelveString(i, tamañoDeDirección) + " (" + i + ")");
+        String dato = String.format("%" + WIDTH_DATO + "s", SistemasNumericos.decimalABinarioDevuelveString(datosAux[i], 8) + " (" + datosAux[i] + ")");
+
+        System.out.println(color + direccion + "    " + dato + ANSI_RESET);
+    }
+}
+
 }

@@ -81,7 +81,7 @@ public class Main {
 
         System.out.println("Caso 7: Prueba transformación binaria y decimal : _______________________________________");
         int valor = 2;
-        System.out.println("El valor " + valor + " en binario es: " + SistemasNumericos.decimalABinario(valor));
+        System.out.println("El valor " + valor + " en binario es: " + SistemasNumericos.decimalABinarioDevuelveString(valor,8));
         int valor2 = 11111111;
         System.out.println("El valor " + valor2 + " en decimal es: " + SistemasNumericos.binarioADecimal(valor2));
         System.out.println("El valor " + valor + " en decimal String es: " + SistemasNumericos.decimalABinarioDevuelveString(valor, tamañoDeDirección));
