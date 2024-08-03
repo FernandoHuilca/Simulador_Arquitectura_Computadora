@@ -35,7 +35,6 @@ public class Cache {
         String tag = direcciónEnBinario.substring(0, longitudDelTag);
         String indexBinario = direcciónEnBinario.substring(longitudDelTag, longitudDelTag + númeroDeBitsDelIndex);
         String offsetBinario = direcciónEnBinario.substring(longitudDelTag + númeroDeBitsDelIndex);
-
         // Convertir los valores binarios a decimales
         int indexDecimal = Integer.parseInt(indexBinario, 2);
         int offsetDecimal = Integer.parseInt(offsetBinario, 2);

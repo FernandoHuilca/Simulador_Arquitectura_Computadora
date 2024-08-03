@@ -16,7 +16,7 @@ public class CPU {
         this.RI = 0;
         this.PC = 0;
         registros= new Registro[2]; //Dos registros en este caso
-        registros[0] = new Registro(2,"R1");
+        registros[0] = new Registro(0,"R1");
         registros[1] = new Registro(0, "R2");
         this.alu = new ALU();
         this.unidadDeControl = new UnidadDeControl();
