@@ -7,7 +7,9 @@ import java.util.Scanner;
 
 import static MemoriaPrincipal.Instrucciones.*;
 
-// Author: Fernando Huilca
+// Author: Fernando Huilca :)
+// Date: 03/08/2024
+
 public class RunMejor {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -77,6 +79,20 @@ public class RunMejor {
         }
         scanner.close();
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // MÉTODOS PARA QUE FUNCIONE EL MENÚ
 
     private static int configurarMemoria(String mensaje, int[] opciones, Scanner scanner) {
         boolean salir = false;
