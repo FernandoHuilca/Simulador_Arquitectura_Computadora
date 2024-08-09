@@ -29,12 +29,13 @@ public enum Instrucciones {
     Ejemplo: XOR R1, R2 (Realiza un XOR bit a bit entre R1 y R2, y almacena el resultado en R1).*/
 
 
-
-
     private int direcciónDeMemoria;
+
     Instrucciones(int direcciónDeMemoria) {
         this.direcciónDeMemoria = direcciónDeMemoria;
     }
+
     public int getDirecciónDeMemoria() {
         return direcciónDeMemoria;
-    }}
+    }
+}

@@ -27,15 +27,18 @@ public class RunMejor {
 
         boolean salir = false;
 
+
         // Configuración inicial de memoria y caché
         tamañoDeDirección = configurarMemoria("Tamaño de la dirección de los datos en la RAM en bits", new int[]{4, 6, 8, 12}, scanner);
         tamañoDeBloque = configurarMemoria("Tamaño de bloque de la RAM en bytes", new int[]{4, 6, 8, 12}, scanner);
         tamañoDeLaCache = configurarMemoria("Tamaño de la cache en bytes", new int[]{8, 12, 16, 32}, scanner);
 
+
         // Creación de la memoria, cache y CPU
         MemoriaPrincipal memoriaPrincipal = new MemoriaPrincipal(tamañoDeDirección, tamañoDeBloque, tamañoDeLaCache);
         Cache cache = new Cache(tamañoDeLaCache, memoriaPrincipal);
         CPU cpu = new CPU(cache);
+
 
         // Cargar datos desde archivo
         try {
