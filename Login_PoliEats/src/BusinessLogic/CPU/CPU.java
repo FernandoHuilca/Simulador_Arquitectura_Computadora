@@ -101,4 +101,8 @@ public class CPU {
     public void setValorMemoriaCache(int numRegistro, String direcciónABinario) {
         cache.cambiaElDatoEnLaDirección(registros[numRegistro].getValor(), direcciónABinario);
     }
+
+    public ALU getALU() {
+        return alu;
+    }
 }
