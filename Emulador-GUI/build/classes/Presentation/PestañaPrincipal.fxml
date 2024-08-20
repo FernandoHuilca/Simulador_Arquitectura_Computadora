@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: #F1F9FF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BusinessLogic.Controllers.PestañaPrincipalController">
+   <children>
+        
+      <Button layoutX="1011.0" layoutY="646.0" mnemonicParsing="false" scaleShape="false" style="-fx-background-color: #AA8AB5;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Button>
+      <Pane layoutX="42.0" layoutY="48.0" prefHeight="462.0" prefWidth="458.0" style="-fx-background-color: #AA8AB5;">
+         <children>
+            <Pane layoutX="14.0" layoutY="9.0" prefHeight="432.0" prefWidth="237.0" style="-fx-background-color: #644B8F;">
+               <children>
+                  <Label layoutX="102.0" layoutY="158.0" text="ALU" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="19.0" />
+                     </font>
+                  </Label>
+                  <Line endX="6.9999847412109375" endY="90.0" layoutX="150.0" layoutY="108.0" startX="-64.19999694824219" startY="90.0" stroke="WHITE" strokeWidth="3.0" />
+                  <Line endX="-118.30000305175781" endY="5.899993896484375" layoutX="160.0" layoutY="118.0" startX="-75.69999694824219" startY="78.5" stroke="WHITE" strokeWidth="3.0" />
+                  <Line endX="32.04264831542969" endY="-7.60003662109375" layoutX="170.0" layoutY="128.0" startX="-11.500015258789062" startY="68.5" stroke="WHITE" strokeWidth="3.0" />
+                  <Line endX="13.599990844726562" endY="54.399993896484375" layoutX="128.0" layoutY="97.0" startX="-24.800003051757812" startY="54.399993896484375" stroke="WHITE" strokeWidth="3.0" />
+                  <Line endX="13.599990844726562" endY="54.399993896484375" layoutX="68.0" layoutY="68.0" startX="-24.800003051757812" startY="54.399993896484375" stroke="WHITE" strokeWidth="3.0" />
+                  <Line endX="18.921310424804688" endY="54.39996337890625" layoutX="181.0" layoutY="66.0" startX="-24.800003051757812" startY="54.399993896484375" stroke="WHITE" strokeWidth="3.0" />
+                  <Line endX="22.999984741210938" endY="71.39999389648438" layoutX="78.0" layoutY="78.0" startX="5.0999908447265625" startY="45.899993896484375" stroke="WHITE" strokeWidth="3.0" />
+                  <Line endX="15.099990844726562" endY="72.89999389648438" layoutX="128.0" layoutY="77.0" startX="28.999984741210938" startY="43.278656005859375" stroke="WHITE" strokeWidth="3.0" />
+                  <Line endX="-23.800003051757812" endY="21.399993896484375" layoutX="146.0" layoutY="218.0" startX="-23.800003051757812" startY="-17.0" stroke="WHITE" strokeWidth="3.0" />
+                  <Line endX="-9.800033569335938" endY="-9.078704833984375" layoutX="131.0" layoutY="259.0" startX="-17.000015258789062" startY="-19.20001220703125" stroke="WHITE" strokeWidth="3.0" />
+                  <Line endX="-8.599990844726562" endY="-30.0" layoutX="141.0" layoutY="269.0" startX="-17.678726196289062" startY="-16.9573974609375" stroke="WHITE" strokeWidth="3.0" />
+                  <Line endX="-23.800003051757812" endY="21.399993896484375" layoutX="84.0" layoutY="76.0" startX="-23.800003051757812" startY="-17.0" stroke="WHITE" strokeWidth="3.0" />
+                  <Line endX="-9.800033569335938" endY="-9.078704833984375" layoutX="69.0" layoutY="117.0" startX="-17.000015258789062" startY="-19.20001220703125" stroke="WHITE" strokeWidth="3.0" />
+                  <Line endX="-8.599990844726562" endY="-30.0" layoutX="79.0" layoutY="127.0" startX="-17.678726196289062" startY="-16.9573974609375" stroke="WHITE" strokeWidth="3.0" />
+                  <Line endX="-23.800003051757812" endY="21.399993896484375" layoutX="201.0" layoutY="79.0" startX="-23.800003051757812" startY="-17.0" stroke="WHITE" strokeWidth="3.0" />
+                  <Line endX="-9.800033569335938" endY="-9.078704833984375" layoutX="186.0" layoutY="120.0" startX="-17.000015258789062" startY="-19.20001220703125" stroke="WHITE" strokeWidth="3.0" />
+                  <Line endX="-8.599990844726562" endY="-30.0" layoutX="196.0" layoutY="130.0" startX="-17.678726196289062" startY="-16.9573974609375" stroke="WHITE" strokeWidth="3.0" />
+                  <Label layoutX="45.0" layoutY="41.0" text="8bits" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="161.0" layoutY="41.0" text="8bits" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="106.0" layoutY="254.0" text="8bits" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="83.0" layoutY="316.0" text="Cero:" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="52.0" layoutY="348.0" text="Negativo:" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="45.0" layoutY="379.0" text="Over Flow:" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                  </Label>
+                  <Circle fx:id="circleCeroAlu" fill="DODGERBLUE" layoutX="150.0" layoutY="326.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="circleNegativoAlu" fill="DODGERBLUE" layoutX="150.0" layoutY="358.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="circleOverFlowAlu" fill="DODGERBLUE" layoutX="150.0" layoutY="389.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Label fx:id="labelEntradaB" layoutX="125.0" layoutY="25.0" text="Entrada B: " textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Label>
+                    
+                   <Label fx:id="labelEntradaA" layoutX="13.0" layoutY="25.0" text="Entrada A: " textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Label>
+                    <Label fx:id="labelSalida" layoutX="57.0" layoutY="280.0" text="Salida: " textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="260.0" layoutY="21.0" prefHeight="182.0" prefWidth="189.0" style="-fx-background-color: #644B8F;">
+               <children>
+                  <TableView fx:id="TablaRegistros" layoutX="5.0" layoutY="34.0" prefHeight="138.0" prefWidth="180.0">
+                     <columns>
+                        <TableColumn fx:id="columnaNombreRegistro" prefWidth="59.199951171875" text="nombre" />
+                        <TableColumn fx:id="columnaValorRegistro" prefWidth="140.800048828125" text="valor" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="3.0" layoutY="7.0" text="Registros" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="307.0" layoutY="269.0" prefHeight="148.0" prefWidth="138.0" style="-fx-background-color: #644B8F;">
+               <children>
+                  <Label layoutX="53.0" layoutY="58.0" text="CU" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#694686" height="20.0" layoutX="264.0" layoutY="334.0" stroke="#694686" strokeType="INSIDE" width="31.0" />
+            <Polygon fill="#694686" layoutX="219.0" layoutY="349.0" points="31.4000244140625, -6.79998779296875, 50.0, 16.4000244140625, 50.0, -29.199951171875" stroke="#694686" strokeType="INSIDE" />
+            <Polygon fill="#694686" layoutX="238.0" layoutY="350.0" points="66.79998779296875, -5.600006103515625, 50.0, 16.4000244140625, 50.0, -29.199951171875" stroke="#694686" strokeType="INSIDE" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#694686" height="32.0" layoutX="355.0" layoutY="220.0" stroke="#694686" strokeType="INSIDE" width="17.0" />
+            <Polygon fill="#694686" layoutX="324.0" layoutY="247.0" points="39.20001220703125, -40.0, 21.79998779296875, -18.0, 57.0, -18.0" stroke="#694686" strokeType="INSIDE" />
+            <Polygon fill="#694686" layoutX="305.0" layoutY="263.0" points="59.79998779296875, 5.399993896484375, 43.0, -13.0, 75.79998779296875, -13.0" stroke="#694686" strokeType="INSIDE" />
+         </children>
+      </Pane>
+      <Pane layoutX="551.0" layoutY="149.0" prefHeight="294.0" prefWidth="270.0" style="-fx-background-color: #5D479A;">
+         <children>
+            <TableView fx:id="TablaCache" layoutX="21.0" layoutY="14.0" prefHeight="160.0" prefWidth="228.0">
+              <columns>
+                <TableColumn fx:id="columnaTag" prefWidth="92.0" text="Tag" />
+                <TableColumn fx:id="columnaBloque" prefWidth="135.20001220703125" text="Bloque" />
+              </columns>
+            </TableView>
+      <Label fx:id="labelContadorInvalidos" layoutX="146.0" layoutY="190.0" text="Inválidos: " textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Label>
+      <Label fx:id="labelContadorValidos" layoutX="146.0" layoutY="217.0" text="Válidos: " textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Label>
+      <Label fx:id="labelOffset" layoutX="25.0" layoutY="252.0" text="Offset: " textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Label>
+      <Label fx:id="labelIndex" layoutX="26.0" layoutY="217.0" text="Index: " textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Label>
+             <Label fx:id="labelTag" layoutX="33.0" layoutY="190.0" text="Tag: " textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Label>
+            <Circle fx:id="circleDirtyBit" fill="#9dffac" layoutX="228.0" layoutY="262.0" radius="9.0" stroke="WHITE" strokeType="INSIDE" />
+            <Label layoutX="144.0" layoutY="252.0" text="Bit Sucio:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="872.0" layoutY="48.0" prefHeight="503.0" prefWidth="286.0" style="-fx-background-color: #5D479A;">
+         <children>
+            <TableView fx:id="TablaMemoriaPrincipal" layoutX="14.0" layoutY="14.0" prefHeight="479.0" prefWidth="260.0">
+              <columns>
+                <TableColumn fx:id="columnaDireccion" prefWidth="108.800048828125" text="Direccion" />
+                <TableColumn fx:id="columnaValor" prefWidth="151.19989013671875" text="Dato" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Label layoutX="872.0" layoutY="22.0" text="Memoria Principal" textFill="#121212e1">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="551.0" layoutY="122.0" text="Cache" textFill="#000000e5">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="22.0" text="CPU" textFill="#000000e0">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#694686" height="20.0" layoutX="510.0" layoutY="361.0" stroke="#694686" strokeType="INSIDE" width="31.0" />
+      <Polygon fill="#694686" layoutX="469.0" layoutY="377.0" points="31.4000244140625, -6.79998779296875, 50.0, 16.4000244140625, 50.0, -29.199951171875" stroke="#694686" strokeType="INSIDE" />
+      <Polygon fill="#694686" layoutX="484.0" layoutY="376.0" points="66.79998779296875, -5.600006103515625, 50.0, 16.4000244140625, 50.0, -29.199951171875" stroke="#694686" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#694686" height="20.0" layoutX="831.0" layoutY="251.0" stroke="#694686" strokeType="INSIDE" width="31.0" />
+      <Polygon fill="#694686" layoutX="790.0" layoutY="268.0" points="31.4000244140625, -6.79998779296875, 50.0, 16.4000244140625, 50.0, -29.199951171875" stroke="#694686" strokeType="INSIDE" />
+      <Polygon fill="#694686" layoutX="805.0" layoutY="267.0" points="66.79998779296875, -5.600006103515625, 50.0, 16.4000244140625, 50.0, -29.199951171875" stroke="#694686" strokeType="INSIDE" />
+      <Pane layoutX="48.0" layoutY="582.0" prefHeight="138.0" prefWidth="452.0" style="-fx-background-color: #5D479A;">
+         <children>
+            <RadioButton fx:id="RadioLOAD" layoutX="36.0" layoutY="45.0" mnemonicParsing="false" text="LOAD" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="Instruccion" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="RadioMOVE" layoutX="143.0" layoutY="45.0" mnemonicParsing="false" text="MOVE" textFill="WHITE" toggleGroup="$Instruccion">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="RadioSUB" layoutX="253.0" layoutY="45.0" mnemonicParsing="false" text="SUB" textFill="WHITE" toggleGroup="$Instruccion">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="RadioSTORE" layoutX="36.0" layoutY="81.0" mnemonicParsing="false" text="STORE" textFill="WHITE" toggleGroup="$Instruccion">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="RadioADD" layoutX="143.0" layoutY="81.0" mnemonicParsing="false" text="ADD" textFill="WHITE" toggleGroup="$Instruccion">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="RadioMUL" layoutX="252.0" layoutY="81.0" mnemonicParsing="false" text="MUL" textFill="WHITE" toggleGroup="$Instruccion">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="28.0" layoutY="8.0" text="Realizar Instrucción" textFill="#ffffffe5">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="RadioBUBBLE" layoutX="347.0" layoutY="58.0" mnemonicParsing="false" text="BUBBLE" textFill="WHITE" toggleGroup="$Instruccion">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </Pane>
+      <Pane layoutX="522.0" layoutY="582.0" prefHeight="138.0" prefWidth="323.0" style="-fx-background-color: #5D479A;">
+         <children>
+            <Label layoutX="24.0" layoutY="14.0" text="Registro:" textFill="#ffffffe5">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="69.0" text="Regis/Direc:" textFill="#ffffffe5">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="ButtonRealizar" layoutX="198.0" layoutY="66.0" mnemonicParsing="false" onAction="#manejarRealizarInstruccion" style="-fx-background-color: #AA8AB5;" text="Realizar" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="TextRegistro1" layoutX="24.0" layoutY="41.0" />
+            <TextField fx:id="TextRegisDirec" layoutX="24.0" layoutY="95.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="866.0" layoutY="582.0" prefHeight="138.0" prefWidth="286.0" style="-fx-background-color: #5D479A;">
+         <children>
+            <Label layoutX="19.0" layoutY="14.0" text="Volver a configurar la RAM" textFill="#ffffffe5">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="ButtonVolver" layoutX="109.0" layoutY="53.0" mnemonicParsing="false" onAction="#volverAConfiguracionMemorias" style="-fx-background-color: #AA8AB5;" text="Volver" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <ImageView fx:id="gifImageView" fitHeight="121.0" fitWidth="111.0" layoutX="724.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Data/imagenes/calamardoo.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
