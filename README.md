@@ -44,7 +44,7 @@ El método `realizarBUBBLE` implementa el algoritmo de ordenamiento Bubble Sort 
 
 </td>
 <td>
-<img src="https://github.com/user-attachments/assets/4bc89594-b82b-4466-a300-2905dbec26bd"alt="Gif Bubble" width="6000">
+<img src="https://github.com/user-attachments/assets/4bc89594-b82b-4466-a300-2905dbec26bd"alt="Gif Bubble" width="600">
 
 
 </td>
